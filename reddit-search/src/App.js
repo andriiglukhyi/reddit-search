@@ -1,8 +1,8 @@
-import './App.css'
 import React, { Component } from 'react'
 import MainPage from './main_page/main_page'
-import RedditSearch from './reddit_search/reddit_search'
-import SearchResultsList from './search_results/search_results'
+import RedditSearch from './SearchForm/search-form'
+import SearchResultList from './SearchResultList/search-result'
+import './App.css'
 
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
         <RedditSearch setAppState={this.setState.bind(this)}/>
 
         { this.state.results ?
-          <SearchResultsList results={this.state.results} />
+          <SearchResultList results={this.state.results} />
           :
           undefined
         }
